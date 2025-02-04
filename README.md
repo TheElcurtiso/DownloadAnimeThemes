@@ -17,8 +17,8 @@ Now this script is super simple to set up. As I will lay out here:
 
 First, just clone or download the repository as a ZIP and put it wherever you like in your file explorer (as long as you
 can find it!). Open up your terminal and navigate to the folder you put the repo in. Make sure you have [Python](https://www.python.org/downloads/)
-installed - it shouldn't matter what version of Python 3 that you use but I'm using `3.12.8` if it makes you feel better
-and run the following line:
+installed - it shouldn't matter what version of Python 3 that you use but I'm using `3.12.8` if it makes you feel better.
+Now run the following line:
 
 `pip install -r requirements.txt`
 
