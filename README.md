@@ -53,4 +53,4 @@ alternatively it could be this if the first doesn't work:
 
 and you're done! It should now start to download all your favourite anime themes!
 
-The songs will be downloaded to a `songs` folder in the same place as the original python file.
+The songs will be downloaded to a `<USERNAME>-songs` folder in the same place as the original python file.

@@ -106,7 +106,7 @@ def search_and_download_songs():
 
 
 def delete_and_create_songs_directory():
-    dir_path = "songs"
+    dir_path = f"{args.username}-songs"
     if os.path.exists(dir_path):
         shutil.rmtree(dir_path)
     os.makedirs(dir_path)
