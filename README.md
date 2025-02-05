@@ -45,12 +45,12 @@ You just need to copy that (no need for the client secret).
 
 You're in the home stretch now! You just need to go back to the terminal and run the script:
 
-`python downloadAnimeThemes.py <INSERT USERNAME> <INSERT CLIENT ID>`
+`python downloadAnimeThemes.py [INSERT USERNAME] [INSERT CLIENT ID]`
 
 alternatively it could be this if the first doesn't work:
 
-`python3 downloadAnimeThemes.py <INSERT USERNAME> <INSERT CLIENT ID>`
+`python3 downloadAnimeThemes.py [INSERT USERNAME] [INSERT CLIENT ID]`
 
 and you're done! It should now start to download all your favourite anime themes!
 
-The songs will be downloaded to a `<USERNAME>-songs` folder in the same place as the original python file.
+The songs will be downloaded to a `[USERNAME]-songs` folder in the same place as the original python file.
