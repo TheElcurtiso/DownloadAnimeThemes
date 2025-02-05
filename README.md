@@ -4,7 +4,7 @@
 eventually!`
 
 Hi, if you're like me you like anime openings and endings and if you're really like me maybe you've spent a bit too much 
-time on [Anime Music Quiz](https://animemusicquiz.com/) and you need that little extra boost to start winning against your 
+time on [Anime Music Quiz](https://animemusicquiz.com/) and you need that little extra boost to dominate against your 
 friends. The thing is its hard to get all that music in one place and I agree! I mean I've seen nearly 200 shows now and 
 I can't keep track of everything that's going to come up on AMQ. Well this python script is the answer! Finally, you can 
 get all the music to jam to and train on in one convenient place!
