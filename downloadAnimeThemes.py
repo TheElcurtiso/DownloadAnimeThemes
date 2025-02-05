@@ -36,9 +36,8 @@ def search_and_download_songs():
     my_anime_list_response = requests.get(user_profile_url,
                                           headers={'X-MAL-CLIENT-ID': f'{args.client_id}'})
 
-    delete_and_create_songs_directory()
-
     if my_anime_list_response.status_code == 200:
+        delete_and_create_songs_directory()
         my_anime_list_data = my_anime_list_response.json()
         user_animes = my_anime_list_data['data']
         # print("Response Data:", user_animes)
@@ -68,7 +67,7 @@ def search_and_download_songs():
                         anime_theme_link = anime_theme['animethemeentries'][0]['videos'][0]['link']
                         file_name = anime_theme_link.split("/")[-1]
 
-                        download_with_progress(anime_theme_link, "songs/" + file_name, file_name)
+                        download_with_progress(anime_theme_link, f"{args.username}-songs/" + file_name, file_name)
                 else:
                     print("Initial search didn't work.")
                     print("Checking alternate title...")
@@ -89,20 +88,23 @@ def search_and_download_songs():
                             anime_theme_link = anime_theme['animethemeentries'][0]['videos'][0]['link']
                             file_name = anime_theme_link.split("/")[-1]
 
-                            download_with_progress(anime_theme_link, "songs/" + file_name, file_name)
+                            download_with_progress(anime_theme_link, f"{args.username}-songs/" + file_name, file_name)
                     else:
                         print(f"Couldn't find {original_title}!")
                         failed_titles.append(original_title)
                         # print(original_title + " != " + anime_theme_search_data['search']['anime'][0]['name'])
             else:
-                print("Failed to retrieve data:", my_anime_list_detailed_response.status_code)
+                print(f"Couldn't find anime list for user: {args.username}! Sorry!")
+                # print("Failed to retrieve data:", my_anime_list_detailed_response.status_code)
             time.sleep(1)
     else:
-        print("Failed to retrieve data:", my_anime_list_response.status_code)
+        print(f"Couldn't find user with username: {args.username}! Sorry!")
+        # print("Failed to retrieve data:", my_anime_list_response.status_code)
 
-    print("Sorry these titles couldn't be downloaded (maybe try and find them manually?): ")
-    for failed_title in failed_titles:
-        print(failed_title)
+    if len(failed_titles) > 0:
+        print("Sorry these titles couldn't be downloaded (maybe try and find them manually?): ")
+        for failed_title in failed_titles:
+            print(failed_title)
 
 
 def delete_and_create_songs_directory():
