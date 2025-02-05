@@ -38,8 +38,8 @@ the furthest tab to the right labelled `API` then click the `Create ID` button. 
 need to write out the app name and type and all that but honestly? You can basically write anything in here (I literally
 wrote google.com as my redirect URL 😆) just fill it out and put the app type as `web` and the purpose of use as `hobbyist`.
 Once you've submitted that it will bring you back to the page before but now with a shiny `Edit` button below the `Create ID`
-button. Just click on the `Edit` button and you should now see a long string of numbers and letters next to Client ID.
-You just need to copy that (no need for the client secret).
+button. Just click on the `Edit` button and you should now see a long string of numbers and letters next to Client ID
+you just need to copy that (no need for the client secret).
 
 #### Last Steps
 
